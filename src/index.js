@@ -35,7 +35,11 @@ app.use(express.static(join(__dirname,'public')));
 // définir le moteur d'affichage sur ejs
 app.set('view engine', 'ejs');
 app.set ('views', join(__dirname,'views','pages'));
+
 app.get('/',(req,res)=> res.render('home'));
+app.get('/services',(req,res)=> res.render('services'));
+app.get('/galery',(req,res)=> res.render('galery'));
+app.get('/contact',(req,res)=> res.render('contact'));
 
 
 // Écoutez le serveur:

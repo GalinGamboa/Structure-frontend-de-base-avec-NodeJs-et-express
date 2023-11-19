@@ -1,0 +1,22 @@
+.img_home{
+  width: 80%;
+}
+
+
+
+.box-menu {
+   background-color: bisque;
+   width: 70%;
+   padding: 2rem;
+   /*background: url(/images/box-menu.jpg);*/
+}
+
+.box-menu>.title,
+.box-menu>.sub-title{
+   color: brown;
+}
+
+.box-menu>.title:hover,
+.box-menu>.sub-title:hover {
+   color: rgb(230, 10, 10);
+}
