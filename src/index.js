@@ -16,6 +16,8 @@ import {fileURLToPath} from 'url';
 // Créer l'application:
 const app = express();
 
+
+
 // Rechercher le répertoire absolu "__dirname"
 const __dirname = dirname(fileURLToPath(import.meta.url)); 
 console.log (__dirname);      // C:\Users\galin\OneDrive\Desktop\NodeJs_frontend_basic\src
@@ -25,12 +27,15 @@ console.log (__dirname);      // C:\Users\galin\OneDrive\Desktop\NodeJs_frontend
    const __dirname = path.resolve('src')
 */ 
 
+
+// utilisation du dossier public
+app.use(express.static(join(__dirname,'public')));
+
 // EJS
 // définir le moteur d'affichage sur ejs
 app.set('view engine', 'ejs');
 app.set ('views', join(__dirname,'views','pages'));
 app.get('/',(req,res)=> res.render('home'));
-
 
 
 // Écoutez le serveur:
