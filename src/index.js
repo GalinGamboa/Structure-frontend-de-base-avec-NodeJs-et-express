@@ -7,8 +7,22 @@
 
 import express from 'express';
 
+// imports pour trover le répertoire absolu
+import path from 'path'
+import {dirname,join }from 'path';
+import {fileURLToPath} from 'url'
+
 // Créer l'application:
 const app = express();
+
+// Rechercher le répertoire absolu "__dirname"
+const __dirname = dirname(fileURLToPath(import.meta.url)); 
+console.log (__dirname)      // C:\Users\galin\OneDrive\Desktop\NodeJs_frontend_basic\src
+
+/*
+   également retrouver le répertoire absolu avec :
+   const __dirname = path.resolve('src')
+*/ 
 
 
 // Écoutez le serveur:
