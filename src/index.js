@@ -40,7 +40,9 @@ app.get('/',(req,res)=> res.render('home'));
 app.get('/services',(req,res)=> res.render('services'));
 app.get('/galery',(req,res)=> res.render('galery'));
 app.get('/contact',(req,res)=> res.render('contact'));
-
+app.use((req, res, next)=>{
+   res.status(404).render('404')
+})
 
 // Écoutez le serveur:
 const PORT = 3000;
